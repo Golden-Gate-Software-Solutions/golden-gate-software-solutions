@@ -15,7 +15,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm relative">
+    <nav className="bg-white shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -36,10 +36,10 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center sm:hidden">
+          <div className="flex items-center sm:hidden relative z-[60]">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 z-50"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
@@ -71,7 +71,7 @@ export default function Navigation() {
       <div 
         className={`${
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        } fixed inset-0 bg-black bg-opacity-50 transition-all duration-300 ease-in-out sm:hidden`}
+        } fixed inset-0 bg-white transition-all duration-300 ease-in-out sm:hidden z-50`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div 
