@@ -1,8 +1,8 @@
 import Hero from '@/components/hero/Hero';
 
 const heroContent = {
-  title: "Transforming Ideas into Digital Excellence",
-  description: "We build innovative software solutions that drive business growth and deliver exceptional user experiences.",
+  title: "Websites That Win You Business",
+  description: "We design fast, modern websites that help you stand out, attract more customers, and turn visitors into loyal clients — all without the tech headaches.",
   primaryCTA: {
     text: "Get Started",
     href: "/contact"
