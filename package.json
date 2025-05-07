@@ -2,6 +2,7 @@
   "name": "ggss-v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://goldengatesoftwaresolutions.com",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
