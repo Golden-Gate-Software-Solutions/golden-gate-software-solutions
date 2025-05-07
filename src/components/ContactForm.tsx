@@ -24,7 +24,7 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 px-0 py-2 bg-transparent"
+          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 focus:outline-none px-0 py-2 bg-transparent"
         />
         <ValidationError prefix="Name" field="name" errors={state.errors} />
       </div>
@@ -38,7 +38,7 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 px-0 py-2 bg-transparent"
+          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 focus:outline-none px-0 py-2 bg-transparent"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
           id="subject"
           name="subject"
           required
-          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 px-0 py-2 bg-transparent"
+          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 focus:outline-none px-0 py-2 bg-transparent"
         />
         <ValidationError prefix="Subject" field="subject" errors={state.errors} />
       </div>
