@@ -6,8 +6,12 @@ import Navigation from "@/components/navigation/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "GGSS",
-  description: "GGSS Application",
+  title: "Golden Gate Software Solutions",
+  description: "Professional web development and software solutions",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

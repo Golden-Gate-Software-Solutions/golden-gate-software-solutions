@@ -9,6 +9,7 @@ export default function Branding() {
           src="/logo.png"
           alt="GGSS Logo"
           fill
+          sizes="(max-width: 768px) 40px, 40px"
           className="object-contain"
           priority
         />
