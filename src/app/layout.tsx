@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Golden Gate Software Solutions',
     description: 'Professional web development and software solutions based in San Francisco',
-    images: ['/ggss_hero.webp'],
+    images: ['https://goldengatesoftwaresolutions.com/ggss_hero.webp'],
   }
 };
 

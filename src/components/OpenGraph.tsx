@@ -23,7 +23,7 @@ export function generateOpenGraph(props: OpenGraphMetadata): Metadata['openGraph
     siteName: props.siteName ?? 'Golden Gate Software Solutions',
     images: props.images ?? [
       {
-        url: '/ggss_hero.webp',
+        url: 'https://goldengatesoftwaresolutions.com/ggss_hero.webp',
         width: 1200,
         height: 630,
         alt: 'Golden Gate Software Solutions',
