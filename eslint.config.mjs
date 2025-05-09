@@ -14,7 +14,7 @@ const eslintConfig = [
   ...compat.config({
     rules: {
       // disable no-unescaped-entities rule
-      "no-unescaped-entities": "off",
+      "react/no-unescaped-entities": "off",
     },
   })
 ];
