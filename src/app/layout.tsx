@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/Footer";
+import { generateOpenGraph } from "@/components/OpenGraph";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
     icon: "/logo.png",
     apple: "/logo.png",
   },
+  openGraph: generateOpenGraph({}),
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Golden Gate Software Solutions',
+    description: 'Professional web development and software solutions based in San Francisco',
+    images: ['/ggss_hero.webp'],
+  }
 };
 
 export default function RootLayout({
