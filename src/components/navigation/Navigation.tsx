@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Branding from './Branding';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const menuItems = [
   { label: 'Home', href: '/' },
@@ -13,33 +13,56 @@ const menuItems = [
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white shadow-sm relative z-50">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300
+        ${scrolled ? 'bg-white/90 backdrop-blur text-gray-900 shadow' : 'bg-transparent text-white'}
+      `}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Branding />
           </div>
-          
           {/* Desktop Menu */}
-          <div className="hidden sm:flex sm:items-center sm:space-x-8">
+          <div className={`hidden sm:flex sm:items-center sm:space-x-8`}>
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200
+                  ${scrolled ? 'text-gray-900 hover:text-blue-700' : 'text-white hover:text-blue-200'}`}
               >
                 {item.label}
               </Link>
             ))}
           </div>
-
           {/* Mobile menu button */}
           <div className="flex items-center sm:hidden relative z-[60]">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500`}
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
@@ -48,7 +71,7 @@ export default function Navigation() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke={scrolled ? '#222' : 'white'}
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -58,7 +81,7 @@ export default function Navigation() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="#222"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -66,7 +89,6 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Mobile menu overlay */}
       <div 
         className={`${
@@ -96,4 +118,4 @@ export default function Navigation() {
       </div>
     </nav>
   );
-} 
+}
