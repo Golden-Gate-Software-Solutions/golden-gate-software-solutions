@@ -1,3 +1,4 @@
+import PageHero from '@/components/hero/PageHero';
 import { MdWeb, MdCode, MdSpeed, MdAutorenew, MdSecurity, MdSupport } from 'react-icons/md';
 
 interface Service {
@@ -41,48 +42,43 @@ const services: Service[] = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive web development and software solutions to help your business thrive in the digital world.
-          </p>
-        </div>
+    <>
+      <PageHero heading="Our Services" />
+      <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-8 transition-transform hover:-translate-y-1"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-6">
-                <service.icon className="w-6 h-6 text-blue-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-8 transition-transform hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-6">
+                  <service.icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-xl text-gray-600 mb-8">
-            Ready to start your next project?
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Get in Touch
-          </a>
+          <div className="mt-16 text-center">
+            <p className="text-xl text-gray-600 mb-8">
+              Ready to start your next project?
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
