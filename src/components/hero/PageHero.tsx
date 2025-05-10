@@ -7,9 +7,14 @@ interface PageHeroProps {
   imageAlt?: string;
 }
 
+const NAV_HEIGHT = '4rem'; // Tailwind h-16
+
 const PageHero: React.FC<PageHeroProps> = ({ heading, imageSrc, imageAlt }) => {
   return (
-    <div className="relative w-full h-64 flex items-center justify-center">
+    <div
+      className="relative w-full h-64 flex items-center justify-center"
+      style={{ paddingTop: NAV_HEIGHT }}
+    >
       {imageSrc ? (
         <>
           <Image

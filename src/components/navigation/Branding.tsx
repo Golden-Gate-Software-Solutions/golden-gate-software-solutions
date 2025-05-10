@@ -14,10 +14,10 @@ export default function Branding() {
           priority
         />
       </div>
-      <div className="flex flex-col leading-tight">
+      <div className="flex flex-col leading-tight sm:flex-row sm:space-x-2 sm:items-center font-bold">
         <span className="text-[18px] ">Golden Gate</span>
         <span className="text-[18px] ">Software Solutions</span>
       </div>
     </Link>
   );
-} 
+}
