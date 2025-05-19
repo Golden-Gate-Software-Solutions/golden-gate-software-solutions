@@ -3,13 +3,7 @@
 import Link from 'next/link';
 import Branding from './Branding';
 import { useState, useEffect } from 'react';
-
-const menuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Contact', href: '/contact' },
-];
+import { content } from '@/content';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +41,7 @@ export default function Navigation() {
           </div>
           {/* Desktop Menu */}
           <div className={`hidden sm:flex sm:items-center sm:space-x-8`}>
-            {menuItems.map((item) => (
+            {content.navigation.menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -103,7 +97,7 @@ export default function Navigation() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {menuItems.map((item) => (
+            {content.navigation.menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
