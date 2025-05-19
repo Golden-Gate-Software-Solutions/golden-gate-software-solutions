@@ -44,28 +44,14 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-          Subject
-        </label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          required
-          className="mt-1 block w-full border-0 border-b-2 border-gray-300 focus:border-blue-500 focus:ring-0 focus:outline-none px-0 py-2 bg-transparent"
-        />
-        <ValidationError prefix="Subject" field="subject" errors={state.errors} />
-      </div>
-
-      <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-          Message
+          Message <span><small>(optional)</small></span>
         </label>
         <textarea
           id="message"
           name="message"
-          required
           rows={4}
+          placeholder="Let's build a website!"
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
         />
         <ValidationError prefix="Message" field="message" errors={state.errors} />
@@ -84,4 +70,4 @@ export default function ContactForm() {
       )}
     </form>
   );
-} 
+}

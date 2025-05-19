@@ -27,7 +27,7 @@ const ContactMethod: React.FC<ContactMethodProps> = ({ icon, text, contactType, 
       href={href}
       target={target}
       rel={rel}
-      className="flex items-center gap-2 hover:text-blue-700 transition-colors group"
+      className="flex items-center mx-auto gap-2 hover:text-blue-700 transition-colors group"
     >
       {icon}
       <span className={className ? `${className} text-gray-600 group-hover:underline` : 'text-gray-600 group-hover:underline'}>{text}</span>

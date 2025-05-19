@@ -2,6 +2,7 @@ import React from 'react';
 import PageHero from '@/components/hero/PageHero';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import ContactMethod from '@/components/ContactMethod';
+import ContactForm from '@/components/ContactForm';
 import { content } from '@/content';
 
 type ContactMethodType = 'email' | 'phone' | 'location';
@@ -13,7 +14,6 @@ const iconMap: Record<ContactMethodType, React.ReactNode> = {
 };
 
 export default function ContactPage() {
-  
   const { heading, methods } = content.contact;
 
   return (
@@ -25,7 +25,7 @@ export default function ContactPage() {
           {heading}
         </h2>
         {/* Contact Methods List */}
-        <div className="flex flex-col gap-6 w-full max-w-md items-start text-left px-8 py-6 bg-white rounded-lg shadow">
+        <div className="flex flex-col gap-6 w-full max-w-md items-start text-left px-8 py-6 bg-white rounded-lg shadow mb-8">
           {methods.map((method, idx) => (
             <ContactMethod
               key={idx}
@@ -36,6 +36,10 @@ export default function ContactPage() {
               {...(method.type === 'email' && { className: 'truncate overflow-hidden whitespace-nowrap max-w-[180px]' })}
             />
           ))}
+        </div>
+        <div className="w-full max-w-md p-8 bg-slate-50 rounded shadow mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Request a Quote</h2>
+          <ContactForm />
         </div>
       </main>
     </>
