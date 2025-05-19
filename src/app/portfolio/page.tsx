@@ -1,4 +1,5 @@
 import PageHero from '@/components/hero/PageHero';
+import PortfolioCardContainer from '@/components/portfolio/PortfolioCardContainer';
 
 export default function PortfolioPage() {
   return (
@@ -11,7 +12,7 @@ export default function PortfolioPage() {
         <p className="text-xl text-gray-600 text-center max-w-2xl mb-8">
           Explore a selection of projects that showcase our expertise in web development, design, and digital solutions.
         </p>
-        {/* Portfolio items will go here */}
+        <PortfolioCardContainer />
       </main>
     </>
   );
