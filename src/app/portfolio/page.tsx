@@ -12,7 +12,9 @@ export default function PortfolioPage() {
         <p className="text-xl text-gray-600 text-center max-w-2xl mb-8">
           Explore a selection of projects that showcase our expertise in web development, design, and digital solutions.
         </p>
+        <div className='px-4'>
         <PortfolioCardContainer />
+        </div>
       </main>
     </>
   );
