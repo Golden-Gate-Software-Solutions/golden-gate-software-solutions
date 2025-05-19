@@ -87,7 +87,7 @@ export default function Navigation() {
       <div 
         className={`${
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        } fixed inset-0 bg-white transition-all duration-300 ease-in-out sm:hidden z-50`}
+        } fixed h-full inset-0 bg-white transition-all duration-300 ease-in-out sm:hidden z-50`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div 
