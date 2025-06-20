@@ -2,11 +2,11 @@
 title = "Waldo"
 +++
 
-# Developing Waldo: A 2D Map Client for AWS IoT RoboRunner
-
-[Visit](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-iot-roborunner-generally-available/)
-
 ![2D IoT Device Map Prototype](https://raw.githubusercontent.com/abstractionjackson/portfolio-hugo/refs/heads/main/content/project/waldo/images/robot-map.webp)
+
+<small>Prototypical Renders from the Mapping Application</small>
+
+# Developing Waldo: A 2D Map Client for AWS IoT RoboRunner
 
 ## Overview
 

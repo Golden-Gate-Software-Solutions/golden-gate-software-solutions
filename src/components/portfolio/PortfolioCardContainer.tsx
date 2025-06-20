@@ -12,7 +12,7 @@ const categories = [
 ];
 
 const portfolioItems = [
-  { slug: "launch-club", category: "E-commerce", title: "Launch Club Golf Simulator", description: "Full site build for MN fitness center that includes payments and scheduling integration.", thumbnail: '/content/portfolio/launch-club/thumbnail.png' },
+  { slug: "launch-club", category: "E-commerce", title: "Launch Club Golf Simulator", description: "Full site build for MN fitness center that includes payments and scheduling integration.", thumbnail: '/content/portfolio/launch-club/logo.png' },
   { slug: "waldo", category: "Web Development", title: "Waldo", description: "A 2D map for IoT devices designed for massive storage facility control centers.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/waldo/images/preview.jpg?raw=true" },
   { slug: "ghx", category: "Web Development", title: "Golden Harvest Seed Distribution Console", description: "A mobile-first dashboard that streamlines agricultural contract management.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/golden-harvest/images/preview.png?raw=true" },
 ];

@@ -7,6 +7,14 @@ categories = ['portfolio']
 tags = ['wordpress', 'gymmaster']
 +++
 
+![golf](/content/portfolio/launch-club/landing.png)
+
+<amall>The Landing Page at launchclubgolf.com</small>
+
+# E-Commerce Website Maintance: Integrations, Content Management, and Performance Optimizations for Launch Club Golf
+
+## Payments and Scheduling Services to Improve UI/UX
+
 [launchclubgolf.com](https://launchclubgolf.com) is home online to the Minneapolis golf simulator that shares its name. Managed via WordPress CMS, the site features not only promotional and informational content, but interactive e-commerce integrations for scheduling and payments. I joined the project in 2024 to help business owner Jason Gillis implement these features, and the result was improved User Experience (UX) and increased customer traffic.
 
 > ...[Jackson] added to my vision with creative solutions

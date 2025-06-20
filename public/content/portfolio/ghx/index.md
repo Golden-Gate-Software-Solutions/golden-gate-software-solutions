@@ -2,9 +2,11 @@
 title = "Golden Harvest"
 +++
 
-# Developing the Golden Harvest Seeds Application
-
 ![Seed and Grain Price Calculator](https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/golden-harvest/images/ghx-placeholder.png?raw=true)
+
+<small>Early Version Admin Console: Yield Calculator Visualization</small>
+
+# Developing the Golden Harvest Seeds Application
 
 ## Overview
 

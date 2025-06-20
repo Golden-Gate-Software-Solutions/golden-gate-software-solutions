@@ -40,8 +40,7 @@ export default async function SlugPage({ params }: Props) {
             <header>
                 <PageHero heading={data.title || slug} />
             </header>
-            <main className="portfolio-post-main mx-auto">
-                {data.description && <p className="lead">{data.description}</p>}
+            <main className="portfolio-post-main mx-auto ">
                 <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </main>
         </div>
