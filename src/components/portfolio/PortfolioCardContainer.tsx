@@ -12,12 +12,14 @@ const categories = [
 ];
 
 const portfolioItems = [
-  { id: 1, title: 'Project Alpha', category: 'Web Development', description: 'A modern web app.', thumbnail: '/ggss_hero.webp' },
-  { id: 2, title: 'Brand X', category: 'Branding', description: 'Brand identity project.', thumbnail: '/ggss_hero.webp' },
-  { id: 3, title: 'ShopNow', category: 'E-commerce', description: 'E-commerce platform.', thumbnail: '/ggss_hero.webp' },
-  { id: 4, title: 'Design Sprint', category: 'Design', description: 'UI/UX design for a startup.', thumbnail: '/ggss_hero.webp' },
-  { id: 5, title: 'NextGen Site', category: 'Web Development', description: 'Corporate website.', thumbnail: '/ggss_hero.webp' },
+  { id: 1, slug: 'project-alpha', title: 'Project Alpha', category: 'Web Development', description: 'A modern web app.', thumbnail: '/ggss_hero.webp' },
+  { id: 2, slug: 'brand-x', title: 'Brand X', category: 'Branding', description: 'Brand identity project.', thumbnail: '/ggss_hero.webp' },
+  { id: 3, slug: 'shopnow', title: 'ShopNow', category: 'E-commerce', description: 'E-commerce platform.', thumbnail: '/ggss_hero.webp' },
+  { id: 4, slug: 'design-sprint', title: 'Design Sprint', category: 'Design', description: 'UI/UX design for a startup.', thumbnail: '/ggss_hero.webp' },
+  { id: 5, slug: 'nextgen-site', title: 'NextGen Site', category: 'Web Development', description: 'Corporate website.', thumbnail: '/ggss_hero.webp' },
 ];
+
+// get the portfolioItems from the files in /public/content/portfolio
 
 function CategoryFilter({ activeCategories, setActiveCategories }: { activeCategories: string[]; setActiveCategories: (cats: string[]) => void }) {
   const handleChange = (cat: string) => {
@@ -71,6 +73,7 @@ function PortfolioCardList({ activeCategories }: { activeCategories: string[] })
       {filtered.map((item) => (
         <PortfolioCard
           key={item.id}
+          slug={item.slug}
           title={item.title}
           category={item.category}
           description={item.description}
