@@ -6,6 +6,16 @@ import { notFound } from 'next/navigation';
 import { remark } from 'remark';
 import html from 'remark-html';
 import './page.css';
+import fs from 'fs';
+import path from 'path';
+
+export async function generateStaticParams() {
+    const dir = path.join(process.cwd(), 'public', 'content', 'portfolio');
+    const files = fs.readdirSync(dir);
+    return files
+        .filter((file) => file.endsWith('.md'))
+        .map((file) => ({ slug: file.replace(/\.md$/, '') }));
+}
 
 export default async function SlugPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
