@@ -22,7 +22,7 @@ type Props = {
 }
 
 export default async function SlugPage({ params }: Props) {
-    const { slug } = (await params;
+    const { slug } = await params;
     const filePath = path.join(process.cwd(), 'public', 'content', 'portfolio', slug, 'index.md');
     if (!fs.existsSync(filePath)) return notFound();
     const file = fs.readFileSync(filePath, 'utf8');
