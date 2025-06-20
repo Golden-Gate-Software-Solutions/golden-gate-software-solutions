@@ -15,13 +15,11 @@ export async function generateStaticParams() {
         .map((entry) => ({ slug: entry.name }));
 }
 
-type Props = Promise<{
+export default async function SlugPage(props: Promise<{
     params: {
         slug: string;
     };
-}>;
-
-export default async function SlugPage(props: Props) {
+}>) {
     const { slug } = (await props).params;
     const filePath = path.join(process.cwd(), 'public', 'content', 'portfolio', slug, 'index.md');
     if (!fs.existsSync(filePath)) return notFound();
