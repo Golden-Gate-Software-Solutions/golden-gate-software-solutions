@@ -9,15 +9,15 @@ import './page.css';
 
 export async function generateStaticParams() {
     const dir = path.join(process.cwd(), 'public', 'content', 'portfolio');
-    const files = fs.readdirSync(dir);
-    return files
-        .filter((file) => file.endsWith('.md'))
-        .map((file) => ({ slug: file.replace(/\.md$/, '') }));
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    return entries
+        .filter((entry) => entry.isDirectory())
+        .map((entry) => ({ slug: entry.name }));
 }
 
-export default async function SlugPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function SlugPage({ params }: { params: { slug: string } }) {
     const { slug } = await params;
-    const filePath = path.join(process.cwd(), 'public', 'content', 'portfolio', `${slug}.md`);
+    const filePath = path.join(process.cwd(), 'public', 'content', 'portfolio', slug, 'index.md');
     if (!fs.existsSync(filePath)) return notFound();
     const file = fs.readFileSync(filePath, 'utf8');
     const { content, data } = matter(file, {

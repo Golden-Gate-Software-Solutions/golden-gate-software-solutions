@@ -12,11 +12,9 @@ const categories = [
 ];
 
 const portfolioItems = [
-  { id: 1, slug: 'project-alpha', title: 'Project Alpha', category: 'Web Development', description: 'A modern web app.', thumbnail: '/ggss_hero.webp' },
-  { id: 2, slug: 'brand-x', title: 'Brand X', category: 'Branding', description: 'Brand identity project.', thumbnail: '/ggss_hero.webp' },
-  { id: 3, slug: 'shopnow', title: 'ShopNow', category: 'E-commerce', description: 'E-commerce platform.', thumbnail: '/ggss_hero.webp' },
-  { id: 4, slug: 'design-sprint', title: 'Design Sprint', category: 'Design', description: 'UI/UX design for a startup.', thumbnail: '/ggss_hero.webp' },
-  { id: 5, slug: 'nextgen-site', title: 'NextGen Site', category: 'Web Development', description: 'Corporate website.', thumbnail: '/ggss_hero.webp' },
+  { slug: "launch-club", category: "E-commerce", title: "Launch Club Golf Simulator", description: "Full site build for MN fitness center that includes payments and scheduling integration.", thumbnail: '/content/portfolio/launch-club/thumbnail.png' },
+  { slug: "waldo", category: "Web Development", title: "Waldo", description: "A 2D map for IoT devices designed for massive storage facility control centers.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/waldo/images/preview.jpg?raw=true" },
+  { slug: "ghx", category: "Web Development", title: "Golden Harvest Seed Distribution Console", description: "A mobile-first dashboard that streamlines agricultural contract management.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/golden-harvest/images/preview.png?raw=true" },
 ];
 
 // get the portfolioItems from the files in /public/content/portfolio
@@ -72,7 +70,7 @@ function PortfolioCardList({ activeCategories }: { activeCategories: string[] })
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {filtered.map((item) => (
         <PortfolioCard
-          key={item.id}
+          key={item.slug}
           slug={item.slug}
           title={item.title}
           category={item.category}
