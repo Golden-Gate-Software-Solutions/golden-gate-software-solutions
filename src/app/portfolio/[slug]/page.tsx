@@ -1,5 +1,3 @@
-'use server';
-
 import matter from 'gray-matter';
 import toml from 'toml';
 import { notFound } from 'next/navigation';
