@@ -5,6 +5,7 @@ import toml from 'toml';
 import { notFound } from 'next/navigation';
 import { remark } from 'remark';
 import html from 'remark-html';
+import PageHero from '@/components/hero/PageHero';
 import './page.css';
 
 export async function generateStaticParams() {
@@ -35,9 +36,11 @@ export default async function SlugPage({ params }: Props) {
     const contentHtml = processedContent.toString();
 
     return (
-        <div className="portfolio-post-container">
-            <main className="portfolio-post-main">
-                <h1>{data.title || slug}</h1>
+        <div className='flex flex-col'>
+            <header>
+                <PageHero heading={data.title || slug} />
+            </header>
+            <main className="portfolio-post-main mx-auto">
                 {data.description && <p className="lead">{data.description}</p>}
                 <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </main>

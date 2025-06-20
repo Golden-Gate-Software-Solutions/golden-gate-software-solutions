@@ -13,6 +13,22 @@ tags = ['wordpress', 'gymmaster']
 >
 > - Jason Gillis, Owner
 
+<!-- ![Launch Club Cards](/content/portfolio/launch-club/launch-club-cards.png) -->
+
 ## Leveraging the WordPress Elementor Plugin for a Mobile-First Redesign
 
-When it comes to e-commerce, accessability is key.
+When it comes to e-commerce, accessability is key. Every customer who tries to visit the site from a mobile device with a poor signal, only to be met with scroll bars and broken images is a customer forfeit, and for small businesses like Jason's, such an outcome is unacceptable. He wisely chose WordPress to manage site hosting and content, and began to use their Elementor system to build the User Interface (UI). Things were going great, because Elementor comes with responsive CSS baked-in, untill his payment processing needs demanded an integration.
+
+In order to couple the widgets his payment system, GymMaster, provides, Jason needed an engineer with JavaScript and HTML/CSS knowledge. I consulted over a productive client meeting in which the scope of the issue became understood. As a software engineer with five years of web development experience, I had worked on low-code systems like Elementor, but no two are exactly alike. My initial approach was to understand the widget, discover how it could be integrated with Elementor, and implement the code required to do so.
+
+## Black-Box Widgets
+
+The GymMaster payments widget was essentially a `script` tag and a `src` attribute. Embedded in the page, the script would fetch JavaScript from the url at `src`. As such, developers cannot tampber with the functionality of the payment system. On the downside, neither can we customize the layout and appearance of the widget.
+
+My solution was to wrap the funtionality in homegrown HTML/CSS. Had this been a bespoke website, like my [portfolio](https://abstractionjackson.com/), I would have been able to update source code directly, but Elementor is a layer of abstraction through which I would need to manipulate the styles. I set about every developer's favorite task: reading the manual.
+
+## Comprehensive Documentation
+
+## Custom Components to the Rescue
+
+## Project Outcomes

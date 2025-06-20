@@ -16,7 +16,6 @@
   padding: 3rem 2rem;
   max-width: 700px;
   width: 100%;
-  margin: 2rem 0;
 }
 
 .portfolio-post-main h1 {
@@ -92,6 +91,16 @@
 .portfolio-post-main p {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.portfolio-post-main blockquote {
+  border-left: 4px solid #2b6cb0;
+  background: #f0f4fa;
+  color: #2b4360;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  font-style: italic;
+  border-radius: 0.5em;
 }
 
 @media (max-width: 600px) {
