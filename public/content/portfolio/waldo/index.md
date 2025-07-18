@@ -2,7 +2,7 @@
 title = "Waldo"
 +++
 
-![2D IoT Device Map Prototype](https://raw.githubusercontent.com/abstractionjackson/portfolio-hugo/refs/heads/main/content/project/waldo/images/robot-map.webp)
+![2D IoT Device Map Prototype](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2021/11/24/2021-aws-iot-roborunner-3.png)
 
 <small>Prototypical Renders from the Mapping Application</small>
 
