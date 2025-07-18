@@ -13,8 +13,8 @@ const categories = [
 
 const portfolioItems = [
   { slug: "launch-club", category: "E-commerce", title: "Launch Club Golf Simulator", description: "Full site build for MN fitness center that includes payments and scheduling integration.", thumbnail: '/content/portfolio/launch-club/logo.png' },
-  { slug: "waldo", category: "Web Development", title: "Waldo", description: "A 2D map for IoT devices designed for massive storage facility control centers.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/waldo/images/preview.jpg?raw=true" },
-  { slug: "ghx", category: "Web Development", title: "Golden Harvest Seed Distribution Console", description: "A mobile-first dashboard that streamlines agricultural contract management.", thumbnail: "https://github.com/abstractionjackson/portfolio-hugo/blob/main/content/project/golden-harvest/images/preview.png?raw=true" },
+  { slug: "waldo", category: "Web Development", title: "Waldo", description: "A 2D map for IoT devices designed for massive storage facility control centers.", thumbnail: "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2021/11/24/2021-aws-iot-roborunner-3.png" },
+  { slug: "ghx", category: "Web Development", title: "Golden Harvest Seed Distribution Console", description: "A mobile-first dashboard that streamlines agricultural contract management.", thumbnail: "https://assets.syngentaebiz.com/images/asdfawef234r.jpg" },
 ];
 
 // get the portfolioItems from the files in /public/content/portfolio
