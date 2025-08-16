@@ -103,6 +103,22 @@
   border-radius: 0.5em;
 }
 
+/* Make images responsive by default within the post */
+.portfolio-post-main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Limit the first image in the main content to a max height */
+/* Assumes markdown renders the lead image as the first paragraph containing an <img> */
+.portfolio-post-main > div > p:first-child > img {
+  max-height: 400px;
+  width: auto;
+  height: auto; /* ensure aspect ratio is respected while capping height */
+  object-fit: contain;
+}
+
 @media (max-width: 600px) {
   .portfolio-post-main {
     padding: 1.5rem 0.5rem;

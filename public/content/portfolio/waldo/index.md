@@ -2,9 +2,9 @@
 title = "Waldo"
 +++
 
-![2D IoT Device Map Prototype](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2021/11/24/2021-aws-iot-roborunner-3.png)
+![An IoT Device Close-up](/content/portfolio/waldo/worker.jpg)
 
-<small>Prototypical Renders from the Mapping Application</small>
+<small>An Exemplary IoT Device</small>
 
 # Developing Waldo: A 2D Map Client for AWS IoT RoboRunner
 

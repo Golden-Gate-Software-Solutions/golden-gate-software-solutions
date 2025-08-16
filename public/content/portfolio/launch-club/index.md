@@ -11,7 +11,7 @@ tags = ['wordpress', 'gymmaster']
 
 <amall>The Landing Page at launchclubgolf.com</small>
 
-# E-Commerce Website Maintance: Integrations, Content Management, and Performance Optimizations for Launch Club Golf
+# Building a Pixel-Perfect E-Commerce Site with Registration and Bookings
 
 ## Payments and Scheduling Services to Improve UI/UX
 
@@ -34,9 +34,3 @@ In order to couple the widgets his payment system, GymMaster, provides, Jason ne
 The GymMaster payments widget was essentially a `script` tag and a `src` attribute. Embedded in the page, the script would fetch JavaScript from the url at `src`. As such, developers cannot tampber with the functionality of the payment system. On the downside, neither can we customize the layout and appearance of the widget.
 
 My solution was to wrap the funtionality in homegrown HTML/CSS. Had this been a bespoke website, like my [portfolio](https://abstractionjackson.com/), I would have been able to update source code directly, but Elementor is a layer of abstraction through which I would need to manipulate the styles. I set about every developer's favorite task: reading the manual.
-
-## Comprehensive Documentation
-
-## Custom Components to the Rescue
-
-## Project Outcomes

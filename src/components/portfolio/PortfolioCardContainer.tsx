@@ -8,13 +8,43 @@ const categories = [
   'Web Development',
   'Design',
   'E-commerce',
-  'Branding',
+  'IoT',
+  'Mobile'
 ];
 
-const portfolioItems = [
-  { slug: "launch-club", category: "E-commerce", title: "Launch Club Golf Simulator", description: "Full site build for MN fitness center that includes payments and scheduling integration.", thumbnail: '/content/portfolio/launch-club/logo.png' },
-  { slug: "waldo", category: "Web Development", title: "Waldo", description: "A 2D map for IoT devices designed for massive storage facility control centers.", thumbnail: "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2021/11/24/2021-aws-iot-roborunner-3.png" },
-  { slug: "ghx", category: "Web Development", title: "Golden Harvest Seed Distribution Console", description: "A mobile-first dashboard that streamlines agricultural contract management.", thumbnail: "https://assets.syngentaebiz.com/images/asdfawef234r.jpg" },
+type PortfolioItem = {
+  slug: string;
+  categories: string[];
+  title: string;
+  description: string;
+  thumbnail?: string;
+};
+
+const portfolioItems: PortfolioItem[] = [
+  {
+    slug: "launch-club",
+    categories: ["E-commerce", "Design"],
+    title: "Launch Club Golf Simulator",
+    description:
+      "Full site build for MN fitness center that includes payments and scheduling integration.",
+    thumbnail: '/content/portfolio/launch-club/logo.png',
+  },
+  {
+    slug: "waldo",
+    categories: ["Web Development", "IoT"],
+    title: "Waldo",
+    description:
+      "A 2D map for IoT devices designed for massive storage facility control centers.",
+    thumbnail: "/content/portfolio/waldo/robaldo.png",
+  },
+  {
+    slug: "ghx",
+    categories: ["Web Development", 'Mobile'],
+    title: "Golden Harvest Seed Distribution Console",
+    description:
+      "A mobile-first dashboard that streamlines agricultural contract management.",
+    thumbnail: "/content/portfolio/ghx/ghx-logo.png",
+  },
 ];
 
 // get the portfolioItems from the files in /public/content/portfolio
@@ -65,7 +95,7 @@ function PortfolioCardList({ activeCategories }: { activeCategories: string[] })
   const filtered =
     activeCategories.includes('All')
       ? portfolioItems
-      : portfolioItems.filter((item) => activeCategories.includes(item.category));
+      : portfolioItems.filter((item) => item.categories.some((c) => activeCategories.includes(c)));
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {filtered.map((item) => (
@@ -73,7 +103,7 @@ function PortfolioCardList({ activeCategories }: { activeCategories: string[] })
           key={item.slug}
           slug={item.slug}
           title={item.title}
-          category={item.category}
+          categories={item.categories}
           description={item.description}
           thumbnail={item.thumbnail}
         />
