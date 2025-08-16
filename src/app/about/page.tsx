@@ -34,10 +34,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           {/* Story Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden mx-auto shadow-lg">
               <Image
-                src="/ggb.jpg"
-                alt="San Francisco Golden Gate Bridge"
+                src="/owner.jpeg"
+                alt="Founder and Lead Engineer, Jackson Galan"
                 fill
                 className="object-cover"
                 priority
@@ -45,17 +45,11 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Story
+                From a Virtual Warehouse to the City by the Bay
               </h2>
               <div className="prose prose-lg text-gray-600">
                 <p className="mb-4">
-                  Founded in the heart of San Francisco, Golden Gate Software Solutions emerged from a vision to bridge the gap between innovative ideas and technological excellence.
-                </p>
-                <p className="mb-4">
-                  Our team combines Silicon Valley expertise with a commitment to delivering solutions that empower businesses to thrive in the digital age.
-                </p>
-                <p>
-                  We specialize in creating custom web applications, e-commerce platforms, and enterprise solutions that help our clients achieve their business objectives.
+                  On November 1st, 2022, Jackson Galan boarded a flight from Chicago's O'Hare to San Francisco International Airport, leaving behind 18 months of software engineering on contract at innovative, international corporations. From developing agricultural contracts management software, to building a sophisticated map of Amazon-scale robot fleets, he had built on a solid foundation as a bootcamp graduate, to call himself a professional software engineer. Now, he decided to become his own boss, and Golden Gate Software Solutions was born.
                 </p>
               </div>
             </div>
@@ -68,7 +62,7 @@ export default function AboutPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <div 
+                <div
                   key={index}
                   className="text-center"
                 >
