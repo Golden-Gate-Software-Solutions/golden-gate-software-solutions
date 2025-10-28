@@ -2,6 +2,13 @@ import Image from 'next/image';
 import { MdLightbulb, MdSpeed, MdSecurity } from 'react-icons/md';
 import PageHero from '@/components/hero/PageHero';
 
+const heading = "About Golden Gate Software Solutions",
+summary = `
+Jackson Galan founded Golden Gate Software Solutions after recognizing a need for true engineering expertise in the web design space. His experience in software engineering revealed how underserved many small businesses are when it comes to reliable, high-quality web development — and he set out on a mission to help change that.
+
+Drawing on his background developing complex systems for innovative, international organizations, Jackson created Golden Gate Software Solutions to bring the same level of technical rigor, performance, and attention to detail to businesses of all sizes. Today, the company combines engineering precision with design sensibility to deliver modern, maintainable, and impactful web solutions.
+`;
+
 interface Value {
   title: string;
   description: string;
@@ -45,11 +52,11 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                From a Virtual Warehouse to the City by the Bay
+                {heading}
               </h2>
               <div className="prose prose-lg text-gray-600">
                 <p className="mb-4">
-                  On November 1st, 2022, Jackson Galan boarded a flight from Chicago's O'Hare to San Francisco International Airport, leaving behind 18 months of software engineering on contract at innovative, international corporations. From developing agricultural contracts management software, to building a sophisticated map of Amazon-scale robot fleets, he had built on a solid foundation as a bootcamp graduate, to call himself a professional software engineer. Now, he decided to become his own boss, and Golden Gate Software Solutions was born.
+                  {summary}
                 </p>
               </div>
             </div>
